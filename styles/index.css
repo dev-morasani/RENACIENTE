@@ -1,0 +1,31 @@
+
+
+
+body {
+    background-color: rgb(180, 180, 165);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    text-align: justify;
+}
+
+
+.topbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #865b09a2;
+}
+
+.topbar ul li{
+    display: inline-flex;
+    margin: 15px;
+}
+
+
+.topbar puntos_opciones{
+    display: flex;
+    justify-content: space-between;
+}
+.topbar a{
+    text-decoration: none;
+    color: #ffffff;
+}
