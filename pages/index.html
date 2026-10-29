@@ -12,76 +12,94 @@
 <body>
      <div class='topbar'>
             <nav>
-                <div class ='nombre_tienda' h1>RENACIENTE</h1></div>    
+                 <div class ='nombre_tienda' h1>RENACIENTE</h1></div>  
                 
-                <div class="searchBar">
-                    <input type="Text" placeholder="Buscar">
-                    <ul id=" sidebarList">
-                    <li><a href="./index.html">Inicio</a></li>
+        
+                    <ul class ="Topbar_list">
+                    <li><a href="./index.html" >Inicio</a></li>
                     <li><a href="./sobreNosotros.html">Sobre Nosotros</a></li>
                     <li><a href="./contacto.html">Contacto</a></li>
                     </ul>
-
-                    <div classs = 'carrito_compras'>
-                        <a href="../pages/carrito.html " class='carrito-menu'>    
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart-heart">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <path d="M4 19a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
-                                <path d="M10 17h-4v-14h-2" />
-                                <path d="M6 5l14 1l-.717 5.016m-7.783 1.984h-5.5" />
-                                <path d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296" />
-                            </svg>
-                        </a>
-                    </div>
-                    <div class = 'puntos_opciones'>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dots-vertical">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                            <path d="M11 19a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                            <path d="M11 5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                        </svg>
-                    </div>
-                </div>
+                    
             </nav>
         </div>
 
-    <main>  
-       <div class= 'item_ropa'>
-            <img href="" src="../src/assets/modelo_camiseta_renaciente_short.png" alt="ropa">
-            <p>
+      
+        <aside class = 'sidebar'>
 
-       </div>
+            <div class="grupo-categorias">
+                <h2>Cuellos</h2>
+                    <ul>
+                        <li><a href="">Cuello redondo</a></li>
+                        <li><a href="">Cuello en V</a></li>
+                        <li><a href="">Cuello alto</a></li>
+                        <li><a href="">Cuello barco</a></li>
+                        <li><a href="">Cuello Henley</a></li>
+                        <li><a href="">Cuello polo</a></li>
+                    </ul>
+            </div>
+
+            <div class="grupo-categorias">
+                <h2>Mangas</h2>
+                <ul>
+                <li><a href="">Manga corta</a></li>
+                <li><a href="">Manga larga</a></li>
+                <li><a href="">Manga tres cuartos</a></li>
+                <li><a href="">Sin mangas</a></li>
+                <li><a href="">Manga raglán</a></li>
+                <li><a href="">Manga caída</a></li>
+                <li><a href="">Manga jamón</a></li>
+                <li><a href="">Manga farol</a></li>
+                <li><a href="">Manga murciélago</a></li>
+                </ul>
+            </div>
+
+            <div class="grupo-categorias">
+                <h2>Cortes</h2>
+                <ul>
+                <li><a href="">Slim fit</a></li>
+                <li><a href="">Regular fit</a></li>
+                <li><a href="">Relaxed fit</a></li>
+                <li><a href="">Oversize</a></li>
+                <li><a href="">Cropped</a></li>
+                <li><a href="">Boxy</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    <main class = 'contenido_principal'>
+        <header class = "topbar">
+
+            <div class="buscador">
+                <input type="text" placeholder="Buscar camisetas...">
+            </div>
+            <div class="botones_svg">    
+                <div class = 'carrito_compras'>
+                    <a href="../pages/carrito.html" class='carrito-menu' aria-label="Ver carrito">    
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart-heart">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 19a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                            <path d="M10 17h-4v-14h-2" />
+                            <path d="M6 5l14 1l-.717 5.016m-7.783 1.984h-5.5" />
+                            <path d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296" />
+                        </svg>
+                    </a>
+                </div>
+                <button class="menu-opciones" aria-label="Más opciones" aria-expanded="false" aria-controls="menu-opciones">⋮</button>
+            </div> 
+        </header>
+
+        <section class = 'Vitrina'>
+        
+            <article class= 'exhibicion1'>
+                <img href="<!-- AQUI VA EL LINK A LA PAGINA DEL PRODUCTO ---->" src="../src/assets/modelo_camiseta_renaciente_short.png" alt="camiseta negra de cuello redondo">
+                <h3> CAMISETA CUELLO REDONDO</h3>
+                <p class = 'precio_exhibicion1'> $86.0000</p>           
+            </article>
+        </section>
     </main>
     
-    <div class = 'barra_lateral'>
-        <ul>
-            <li><a href="">Cuello redondo (crew neck)</a></li>
-            <li><a href="">Cuello en V (V-neck)</a></li>
-            <li><a href="">Cuello alto o tortuga</a></li>
-            <li><a href="">Cuello barco</a></li>
-            <li><a href="">Cuello Henley</a></li>
-            <li><a href="">Cuello polo</a></li>
-            <li><a href="">Manga corta</a></li>
-            <li><a href="">Manga larga</a></li>
-            <li><a href="">Manga tres cuartos</a></li>
-            <li><a href="">Sin mangas (esqueleto)</a></li>
-            <li><a href="">Manga raglán</a></li>
-            <li><a href="">Manga caída u hombro caído</a></li>
-            <li><a href="">Manga jamón</a></li>
-            <li><a href="">Manga farol</a></li>
-            <li><a href="">Manga murciélago</a></li>
-            <li><a href="">Slim fit</a></li>
-            <li><a href="">Regular fit o clásico</a></li>
-            <li><a href="">Relaxed fit</a></li>
-            <li><a href="">Oversize</a></li>
-            <li><a href="">Cropped</a></li>
-            <li><a href="">Boxy o cuadrada</a></li>
-            <li><a href="">Camiseta deportiva o athletic</a></li>
-            <li><a href="">Camiseta gráfica</a></li>
-            <li><a href="">Polo</a></li>
-            
-        </ul>
-</body>
+    </body>
 
 <footer> TODOS LOS DERECHOS RESERVADOS </footer>
 </html>

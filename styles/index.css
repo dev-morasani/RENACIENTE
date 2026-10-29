@@ -1,31 +1,190 @@
+/*
 
+
+DESDE AQUI EMPIEZA EL CODIGO QUE YO HE REALIZADO, ANTES DE EMPEZAR A HACERLO PASO A PASO CON IA
 
 
 body {
     background-color: rgb(180, 180, 165);
-    font-family: 'Georgia', 'Times New Roman', serif;
-    text-align: justify;
+    display:
+}
+
+
+.nombre_tienda{
+    font-size: 22px;
+    letter-spacing: 10px;
+    color: #111;
+    white-space: nowrap;
+    margin-right: auto;
 }
 
 
 .topbar{
-    display:flex;
-    justify-content: space-between;
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #865b09a2;
+        font-family: 'Georgia', 'Times New Roman', serif;
+        
+}
+
+.topbar ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+
+.topbar nav {
+    display: flex;
     align-items: center;
-    background-color: #865b09a2;
 }
 
-.topbar ul li{
-    display: inline-flex;
-    margin: 15px;
+.botones_svg{
+    display: flex;
+    align-items: center;
+
+}
+.sidebarList{
+
 }
 
 
-.topbar puntos_opciones{
+
+
+.topbar .puntos_opciones{
     display: flex;
     justify-content: space-between;
 }
 .topbar a{
     text-decoration: none;
     color: #ffffff;
+}
+
+
+.buscador input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  min-width: 200px;
+  }
+
+  .sidebar{
+
+  }
+
+
+.exhibicion1{
+}
+
+  main{
+  }
+  AQUI TERMINA EL CODIGO QUE HICE, ANTES DE APRENDER A HACER PASO POR PASO LAS LINEAS DE CODIGO
+  
+  
+  
+  
+  
+  AQUI INICIA EL CODIGO QUE ESTOY APRENDIENDO A HACER CON IA
+  */
+
+
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*SEGUN ENTIENDO, ESTO QUITA LOS ESPACIOS QUE HAY DE MANERA
+PRETERMINADA, DEPENDIENDE DE CUAL NAVEGADOR ABRA MI PAGINA
+EN LA PAGINA, Y TAMBIEN PERMITE QUE EL ANCHO
+QUE YO INDICO, SEA LO UNICO QUE AUMENTE EL TAMAÑO */
+
+body{
+  display: flex; /*ESTO PERMITE QUE LA UBICACION DE CADA PARTE DEL CODIGO QUEDE DONDE YO DECIDA*/
+  min-height: 100vh;/*ESTO ESTABLECE QUE EL BODY USE EL 100% DE LA PANTALLA, Y SI LA PANTALLA CRECE, ESTE TAMBIEN LO HARA*/
+  font-family: Georgia, 'Times New Roman', serif;/* ESTA LINEA ESTABLECE EL TEXTO QUE VA A TENER TODA LA PAGINA*/
+  background-color: #f5f0e8;
+  color: #2a2a2a;
+}
+
+.sidebar{
+    widht: 280px; /*ESTO ESTABLECE UN LIMITE PARA LA BARRA LATERAL DE LA PAGINA*/
+    flex-shrink: 0; /*ESTO EVITA QUE TODA LA BARRA LATERAL SE ENCOJA Y NO SE ENTIENDA EL TEXTO DE LA CLASIFICACION DE LAS CAMISETAS*/
+    background-color: #3d2a0f; /*ESTE ES EL COLOR DEL FONDO DE LA BARRA LATERAL*/
+    color: #f5f0e8; /*ESTE ES EL COLOR DEL TEXTO*/
+    padding: 24px 18px; /*ESTO GENERAR BORDES DENTRO DE LA BARRA LATERAL, PRIMERO ARRIBA Y ABAJO, LUEGO DERECHA E IZQUIERDA*/
+    border-right: 1px solid #5a4020; /*ESTO ESTABLECE UNA LINEA DELIMITADORA DE TODA LA BARRA LATERAL Y VA CON EL COLOR DEL MISMO*/
+    display: flex; /*ESTO PERMITE QUE TODA LA BARRA TENGA LA CARACTERISTICA DE CONTENEDOR FLEX*/
+    flex-direction:column ;/*ESTO INDICA QUE TODOS LOS ITEMS QUE SE ENCUENTRAN DENTRO DE LA BARRA LATERAL SE ACOMODEN EN COLUMNAS*/
+    gap: 32px;/*ESTO HACE QUE CADA ITEM QUE ESTA ORGANIZADO COMO COLUMNA, TENGA UN ESPACIO ENTRE CADA UNA DE ELLAS*/
+    position: sticky: top: 0;  /*ESTO PERMITE QUE LA BARRA SIEMPRE ESTE UNIDA A LA PARTE SUPERIOR DE LA TOPBAR*/
+    height: 100vh; /*ESTO PERMITE QUE SIEMPRE OCUPE TODA LA ALTURA DISPONIBLE DE LA PAGINA, SIN IMPORTAR EL TAMANO DEL NAVEGADOR*/
+    overflow-y: auto; /*ESTO PERMITE QUE SIEMPRE OCUPE TODA LA ALTURA DISPONIBLE DE LA PAGINA, SIN IMPORTAR EL TAMANO DEL NAVEGADOR*/
+}
+.nombre_tienda{
+
+    font-size: 20px; /*ESTO INDICA EL TAMAÑO DEL TEXTOS*/
+    font-weight: 700; /*ESTO ESPECIFICA EL GROSOSR DEL TEXTO*/
+    letter-spacing: 8px; /*ESTO ESPECIFICA EL ESPACIO QUE QUEDA ENTRE LETRA Y LETRA DE LAS PALABRAS*/
+    text-align: center; /*ESTO HACE QUE EL TEXTO SE CENTRE EN EL ESPACIO QUE TIENE ASIGNADO*/
+    color: #ffd27a; /*ESTE ES EL COLOR DEL TEXTO*/
+}
+.sidebar ul {
+    list-style: none; /*ESTO EVITA QUE TODO EL LISTADO APAREZCA SIN LOS PUNTOS DONDE IDENTIFICA A CADA ITEM*/
+}
+.sidebar-menu a{
+    display: block; /*ESTO PERMITE OCUPAR TODO EL ESPACIO DISPONIBLE Y ASI SE OBTIENE UNA MEJOR PRECISION AL CLICKEAR*/ 
+    padding: 10px 14px; /*ESTO HACE QUE SE AUMENTE EL TAMANO DE LOS LADOS PARA QUE SE VEA COMO UN BOTON*/
+    text-align: center; /*ESTO PERMITE QUE EL TEXTO SE QUEDE EN EL CENTRO DEL ESPACIO ASIGNADO*/
+    color: #f5f0e8;
+    text-decoration: none; /*ESTO QUITA LA LINEA QUE SUBRAYA EL TEXTO*/
+    border-radius: 6px; /*ESTO AYUDA A QUE LAS ESQUINAS SEAN REDONDAS Y NO LINEALES*/
+    transition: background 0.2s, color 0,2;/*ESTO HACE QUE CUANDO PONEN EL MOUSE ENCIMA, SE HAGA UNA TRANSICION SUAVE Y NO ALGO INSTANTANEO*/
+}
+
+.sidebar-menu a:hover, /*APLICA UN ESTILO CUANDO PASAN EL MOUSE ENCIMA DEL TEXTO O LUGAR INDICADO*/
+.sidebar-menu a[aria-current="page"]{ /*ESTO DICE QUE DEBE DE APLICAR EL ESTILO A LO QUE ESTAN MARCANDO CON EL CURSOR*/
+    background-color: #5a4020; /*CUANDO PASA EL CURSOR ENCIMA DEL TEXTO O LUGAR, SE CAMBIA EL COLOR DEL FONDO */
+    color: #ffd27a;/*CUANDO SE PASA EL CURSOR ENCIMA DEL TEXTO O LUGAR, CAMBIA EL COLOR DEL TEXTO*/
+}
+
+.grupo-categorias + .grupo-categorias{ /*EL + EN LA SENTENCIA INDICA QUE CADA VEZ QUE HAYA UN ITEM LLAMADO 
+    GRUPO-CATEGORIAS, DEBE DE PONERLE UN MARGEN EN LA PARTE SUPERIOR*/
+    margin-top: 18px; /*ES EL NIVEL DE MARGEN QUE SE LE PONE A CADA ITEM DE ESE GRUPO*/ 
+}
+
+.grupo-categorias h2{
+    font-size: 12px; /*AQUI ESPECIFICA QUE DEBE DE TENER UN TAMANO MENOR QUE EL RESTO*/
+    text-transform: uppercase; /*ESTO ES UN PLUS, ESTO SIEMPRE MUESTRA EL TEXTO EN MAYUSCULAS, PERO DE MANERA INTERNA SIGUE SIENDO MINUSCULAS*/
+    letter-spacing: 2px; /*ESTO INDICA EL ESPACIO QUE DEBE DE TENER ENTRE LETRAS DE LA O LAS PALABRAS*/
+    color: #ffd27a; /*ESTABLECE UN COLOR DORADO*/
+    margin-bottom: 8px; /*ESTO SEPARA CADA SECCION LATERAL O CATEGORIA DE LAS CAMISETAS DEL SIDEBAR*/
+    padding-left: 12px; /*DICE QUE ESTO ALINEA CON LOS ENLACES EN LA PARTE INFERIOR*/
+}
+.grupo-categorias ul {
+  list-style: none; /*ESTO EVITA QUE LE SALGAN LOS PUNTOS DE CADA ITEM*/
+}
+
+.grupo-categorias a {
+  display: block; /*ESTO PERMITE QUE PUEDAN TOMAR TODO EL ESPACIO DISPONIBLE Y NO SOBRE NADA*/
+  padding: 6px 12px; /*ESTO AUMENTA EL TAMANO PARA QUE PAREZCA QUE ES UN BOTON, PERO SOLO ES UN CAMBIO DE COLOR */
+  color: #d8c9b0;/*CUANDO PASAN EL CURSOR, PASA A TENER ESTE COLOR*/
+  text-decoration: none;/*ESTO PERMITE QUE NO SE SUBRAYE EL TEXTO*/
+  font-size: 14px;/*ESTE ESTABLECE EL TAMANO DEL TEXTO*/ 
+  border-radius: 4px; /*ESTO HACE QUE SE REDONDEE MAS LAS ESQUINAS DEL CUADRO DE TEXTO*/
+  transition: background 0.15s, color 0.15s;/*ESTO PERMITE QUE SE CAMBIE EL COLOR DE UNA MANERA SUAVE Y NO DE MANERA BRUSCA*/
+}
+
+.grupo-categorias a:hover {
+  background-color: #5a4020; /*ESTO HACE QUE CADA VEZ QUE PONGAN EL CURSOR ENCIMA DEL CUADRO DE TEXTO, SE CAMBIE A ESE COLOR*/
+  color: #ffd27a; /*ESTO HACE CUANDO PONEN EL CURSOR, SE CAMBIE EL COLOR DEL CUADRO DE TEXTO*/
+}
+
+.contenido_principal{
+    flex: 1; /*ESTO HACE QUE EL MAIN PUEDA OCUPAR TODO EL ESPACIO QUE HAY DENTRO DEL SIDEBAR*/
+    min-width: 0; /*PERMITE QUE EL MAIN SE PUEDA PONER PEQUENO SIN TENER QUE ROMPER LA PAGINA */
+    display: flex:/*ESTO ME PERMITE TENER EL TOPBAR ARRIBA Y ABAJO LA VITRINA CON LOS ITEMS*/ 
+    flex-direction: column; /*ESTO LE INDICA A LA MAQUINA QUE PRIMERO DEBE DE PONER EL TOPBAR Y LUEGO LA VITRINA CON LOS ITEMS*/
+
 }
