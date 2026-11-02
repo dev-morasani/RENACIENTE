@@ -13,7 +13,6 @@ body{
     grid-template-columns: 280px 1fr;   /* col 1: sidebar | col 2: main */
     grid-template-rows: 1fr auto;        /* fila 1: contenido | fila 2: footer */
     min-height: 100vh; /*ESTO PERMITE QUE LA UBICACION DE CADA PARTE DEL CODIGO QUEDE DONDE YO DECIDA*/
-    min-height: 100vh;/*ESTO ESTABLECE QUE EL BODY USE EL 100% DE LA PANTALLA, Y SI LA PANTALLA CRECE, ESTE TAMBIEN LO HARA*/
     font-family: Georgia, 'Times New Roman', serif;/* ESTA LINEA ESTABLECE EL TEXTO QUE VA A TENER TODA LA PAGINA*/
     background-color: #f5f0e8;
     color: #2a2a2a;
@@ -21,7 +20,6 @@ body{
 main {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
 .sidebar{
     width: 280px; /*ESTO ESTABLECE UN LIMITE PARA LA BARRA LATERAL DE LA PAGINA*/
@@ -33,12 +31,11 @@ main {
     display: flex; /*ESTO PERMITE QUE TODA LA BARRA TENGA LA CARACTERISTICA DE CONTENEDOR FLEX*/
     flex-direction:column ;/*ESTO INDICA QUE TODOS LOS ITEMS QUE SE ENCUENTRAN DENTRO DE LA BARRA LATERAL SE ACOMODEN EN COLUMNAS*/
     gap: 32px;/*ESTO HACE QUE CADA ITEM QUE ESTA ORGANIZADO COMO COLUMNA, TENGA UN ESPACIO ENTRE CADA UNA DE ELLAS*/
-    height: 100vh; /*ESTO PERMITE QUE SIEMPRE OCUPE TODA LA ALTURA DISPONIBLE DE LA PAGINA, SIN IMPORTAR EL TAMANO DEL NAVEGADOR*/
+    
     overflow-y: auto; /*ESTO PERMITE QUE SIEMPRE OCUPE TODA LA ALTURA DISPONIBLE DE LA PAGINA, SIN IMPORTAR EL TAMANO DEL NAVEGADOR*/
     align-self: auto;
     position:sticky;
-    top:0;
-    left:0;
+    height: 100vh; /*ESTO PERMITE QUE SIEMPRE OCUPE TODA LA ALTURA DISPONIBLE DE LA PAGINA, SIN IMPORTAR EL TAMANO DEL NAVEGADOR*/    top:0;
     z-index:100;
 }
 .nombre_tienda{
@@ -86,7 +83,6 @@ main {
 }
 
 .contenido_principal{
-    flex: 1; /*ESTO HACE QUE EL MAIN PUEDA OCUPAR TODO EL ESPACIO QUE HAY DENTRO DEL SIDEBAR*/
     min-width: 0; /*PERMITE QUE EL MAIN SE PUEDA PONER PEQUENO SIN TENER QUE ROMPER LA PAGINA */
     display: flex;/*ESTO ME PERMITE TENER EL TOPBAR ARRIBA Y ABAJO LA VITRINA CON LOS ITEMS*/ 
     flex-direction: column; /*ESTO LE INDICA A LA MAQUINA QUE PRIMERO DEBE DE PONER EL TOPBAR Y LUEGO LA VITRINA CON LOS ITEMS*/
@@ -211,6 +207,37 @@ main {
     color: #865b09;
     font-weight: 700; /*ESTO PERMITE DESTACAR EL CONTENIDO*/
 }
+.opciones-tallas {
+  display: flex;/*ESTO ORGANIZA LOS BLOQUES DE LAS TALLAS DE LAS CAMISETAS*/
+  flex-wrap: wrap;      /* SI NO CABEN */
+  gap: 8px;
+  padding: 10px 10px 8px 10px;
+}
+
+.opciones-tallas label { /*ESTO CREA LOS BLOQUES DE LAS TALLAS CON EFECTOS, ASI COMO EN LA CLASIFICACION*/
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  background-color: #4a3312;
+  color: #f5f0e8;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;      /* manito al pasar */
+  transition: background 0.15s, color 0.15s;
+}
+
+.opciones-tallas label:hover {
+  background-color: #5a4020; /*ESTO ME PERMITE CAMBIAR EL COLOR AL PASAR EL CURSOR*/
+  color: #ffd27a;
+}
+
+.opciones-tallas input[type="checkbox"] {
+  accent-color: #ffd27a;   /*CADA VEZ QUE SE SELECCIONE UNA TALLA, SE CAMBIA EL COLOR DEL CHECKBOX*/
+  cursor: pointer;
+}
+
+
 @media (max-width: 900px){ /*ESTO SE ACTIVA SOLO CUANDO LA PAGINA TIENE UN TAMANO MENOR A 900PX*/
     body { /*ERROR ERROR ERROR FALTA ARREGLAR ------------------------------------
             AUN FALTA ARREGLAR ESTA PARTE PORQUE LA SIDEBAR
@@ -238,4 +265,70 @@ footer { /*ESTO ACOMODA DE BUENA MANERA EL FOOTER AL FINAL DE LA PAGINA*/
   color: #f5f0e8;
   padding: 20px;
   text-align: center;
+}
+#sin-resultados {
+    grid-column: 1 / -1;   /* ESTA PARTE ESTA DISENADA PARA CUANDO NO SE ENCUENTRE LA PRENDA CON LA TALLA XS ES UN TEXTO SENCILLO PERO ENTENDIBLE PARA EL USUARIO*/
+    text-align: center;
+    padding: 40px 20px;
+    color: #865b09;
+    font-size: 16px;
+    background-color: #fffaf0;
+    border-radius: 12px;
+}
+#contador-prendas {
+    padding: 0 28px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #865b09;
+}
+.acciones {
+    position: relative;   /* para que el menú se posicione respecto a los iconos */
+}
+
+.menu-desplegable {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fffaf0;
+    border: 1px solid #e0d5c0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(60, 40, 10, 0.12);
+    padding: 6px 0;
+    min-width: 160px;
+    z-index: 20;
+}
+
+.menu-desplegable a {
+    display: block;
+    padding: 8px 14px;
+    color: #3d2a0f;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.menu-desplegable a:hover {
+    background-color: #f0e5d0;
+}
+
+
+.btn-limpiar {
+    margin-top: 10px;
+    margin-bottom:0;
+    margin-left: 100px;
+    padding: 8px 14px;
+    background-color: transparent;
+    color: #000000;
+    border: 1px solid #695325;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 13px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    align-self: flex-start;   /* que no ocupe todo el ancho del sidebar */
+}
+
+.btn-limpiar:hover {
+    background-color: #ffd27a;
+    color: #3d2a0f;
 }

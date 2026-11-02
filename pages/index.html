@@ -17,15 +17,14 @@
             <div class="grupo-categorias">
                 <h2>Cuellos</h2>
                     <ul>
-                        <li><a href="">Cuello redondo</a></li>
-                        <li><a href="">Cuello en V</a></li>
-                        <li><a href="">Cuello alto</a></li>
-                        <li><a href="">Cuello barco</a></li>
-                        <li><a href="">Cuello Henley</a></li>
-                        <li><a href="">Cuello polo</a></li>
+                        <li><a href="#" data-categoria="cuello-redondo">Cuello redondo</a></li>
+                        <li><a href="#" data-categoria="cuello-en-v">Cuello en V</a></li>
+                        <li><a href="#" data-categoria="cuello-alto">Cuello alto</a></li>
+                        <li><a href="#" data-categoria="cuello-barco">Cuello barco</a></li>
+                        <li><a href="#" data-categoria="cuello-henley">Cuello Henley</a></li>
+                        <li><a href="#" data-categoria="cuello-polo">Cuello polo</a></li>
                     </ul>
             </div>
-
             <div class="grupo-categorias">
                 <h2>Mangas</h2>
                 <ul>
@@ -40,7 +39,6 @@
                 <li><a href="">Manga murciélago</a></li>
                 </ul>
             </div>
-
             <div class="grupo-categorias">
                 <h2>Cortes</h2>
                 <ul>
@@ -52,6 +50,7 @@
                 <li><a href="">Boxy</a></li>
                 </ul>
             </div>
+            
         </aside>
 
     <main class = 'contenido_principal'>
@@ -83,299 +82,79 @@
                 <!--------AUN FALTA CREAR LA LISTA DESPLEGABLE DE LAS OPCIONES ------------------->
                 <!-- ADICIONAL, AUN FALTA CREAR LA PESTANA PARA PODER CREAR LA CUENTA O INGRESAR LA MISMA-->
                 <button class="menu-opciones" aria-label="Más opciones" aria-expanded="false" aria-controls="menu-opciones">⋮</button>
+                 <div class="menu-desplegable" id="menu-desplegable" hidden>
+                    <a href="../pages/cuenta.html">Mi cuenta</a>
+                    <a href="../pages/pedidos.html">Mis pedidos</a>
+                    <a href="../pages/logout.html">Cerrar sesión</a>
+                </div>
             </div> 
         </header>
         <h1 class="titulo-vitrina">Camisetas RENACIENTE</h1>
+         <div class="grupo-categorias filtro-tallas"> 
+        <div class="opciones-tallas">
+            <label><input type="checkbox" value="XS">  XS</label>
+            <label><input type="checkbox" value="S">   S</label>
+            <label><input type="checkbox" value="M">   M</label>
+            <label><input type="checkbox" value="L">   L</label>
+            <label><input type="checkbox" value="XL">  XL</label>
+            <label><input type="checkbox" value="XXL"> XXL</label>
+        </div>
+
+        <button id="btn-limpiar" class="btn-limpiar">Limpiar filtros</button>
+    </div>
         <!-- HAY MUCHAS PRENDAS COPIADAS Y PEGADAS, ES POR ESO QUE CERRE LA VITRINA,
                 Y SOLO ABRIRLA CUANDO SEA NECESARIO-->
         <section class = 'vitrina'>
-                <article class= 'prenda'>
+                <article class= 'prenda' data-tallas='S' data-categoria="cuello-redondo">
                   <a href="../pages/producto.html">
                         <img src="../src/assets/modelo_camiseta_renaciente_short.png"
                         alt="Camiseta negra de cuello redondo">
                     </a>                 
                     <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $86.000</p>           
+                    <p class = 'precio'> $56.000</p>           
                 </article>
-                <article class= 'prenda'>
+                <article class= 'prenda' data-tallas='M' data-categoria="cuello-en-v">
                   <a href="../pages/producto.html">
                         <img src="../src/assets/modelo_camiseta_renaciente_short.png"
                         alt="Camiseta negra de cuello redondo">
                     </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $96.000</p>           
+                    <h3> CAMISETA CUELLO EN V</h3>
+                    <p class = 'precio'> $56.000</p>           
                 </article>
-                <article class= 'prenda'>
+                <article class= 'prenda' data-tallas='L' data-categoria="cuello-alto">
                   <a href="../pages/producto.html">
                         <img src="../src/assets/modelo_camiseta_renaciente_short.png"
                         alt="Camiseta negra de cuello redondo">
                     </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $106.000</p>           
+                    <h3> CAMISETA CUELLO ALTO</h3>
+                    <p class = 'precio'> $56.000</p>           
                 </article>
-                <article class= 'prenda'>
+                <article class= 'prenda' data-tallas='XL' data-categoria="cuello-barco">
                   <a href="../pages/producto.html">
                         <img src="../src/assets/modelo_camiseta_renaciente_short.png"
                         alt="Camiseta negra de cuello redondo">
                     </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $126.000</p>           
+                    <h3> CAMISETA CUELLO BARCO</h3>
+                    <p class = 'precio'> $56.000</p>           
                 </article>
-                <article class= 'prenda'>
+                <article class= 'prenda' data-tallas='XXL' data-categoria="cuello-henley">
                   <a href="../pages/producto.html">
                         <img src="../src/assets/modelo_camiseta_renaciente_short.png"
                         alt="Camiseta negra de cuello redondo">
                     </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $136.000</p>           
+                    <h3> CAMISETA CUELLO HENLEY</h3>
+                    <p class = 'precio'> $56.000</p>           
                 </article>
-                <article class= 'prenda'>
+                <article class= 'prenda' data-tallas='XS' data-categoria="cuello-polo">
                   <a href="../pages/producto.html">
                         <img src="../src/assets/modelo_camiseta_renaciente_short.png"
                         alt="Camiseta negra de cuello redondo">
                     </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $146.000</p>           
+                    <h3> CAMISETA CUELLO POLO</h3>
+                    <p class = 'precio'> $56.000</p>           
                 </article>
-                <article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $156.000</p>           
-                </article>
-                <article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $166.000</p>           
-                </article>
-                <article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $86.000</p>           
-                </article>
-                <article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $86.000</p>           
-                </article>
-                <article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $86.000</p>           
-                </article>
-                <article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $86.000</p>           
-                </article>
-                <article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $86.000</p>           
-                </article>
-                <article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $96.000</p>           
-                </article>
-                <article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $106.000</p>           
-                </article>
-                <article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $126.000</p>           
-                </article>
-                <article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $136.000</p>           
-                </article>
-                <article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $146.000</p>           
-                </article>
-                <article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $156.000</p>           
-                </article>
-                <article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $166.000</p>           
-                </article>
-                <article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $86.000</p>           
-                </article>
-                <article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $86.000</p>           
-                </article>
-                <article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $86.000</p>           
-                </article>
-                <article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $86.000</p>           
-                </article><article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $86.000</p>           
-                </article>
-                <article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $96.000</p>           
-                </article>
-                <article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $106.000</p>           
-                </article>
-                <article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $126.000</p>           
-                </article>
-                <article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $136.000</p>           
-                </article>
-                <article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $146.000</p>           
-                </article>
-                <article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $156.000</p>           
-                </article>
-                <article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $166.000</p>           
-                </article>
-                <article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $86.000</p>           
-                </article>
-                <article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $86.000</p>           
-                </article>
-                <article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $86.000</p>           
-                </article>
-                <article class= 'prenda'>
-                  <a href="../pages/producto.html">
-                        <img src="../src/assets/modelo_camiseta_renaciente_short.png"
-                        alt="Camiseta negra de cuello redondo">
-                    </a>                 
-                    <h3> CAMISETA CUELLO REDONDO</h3>
-                    <p class = 'precio'> $86.000</p>           
-                </article>
+                
+               
 
                 <!-- TUVE QUE PONER LOS MISMOS PRODUCTOS EN REPETIDAS OCACIONES PARA 
                  PROBAR QUE MI SIDEBAR FUERA FIJA Y AL PRIMER INTENTO NO FUNCIONO,
@@ -383,5 +162,6 @@
         </section>
     </main>
     <footer> TODOS LOS DERECHOS RESERVADOS </footer>
+    <script src= '../js/index.js'></script>
 </body>  
 </html>
