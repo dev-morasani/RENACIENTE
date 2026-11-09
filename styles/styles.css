@@ -1,7 +1,8 @@
   * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 /*SEGUN ENTIENDO, ESTO QUITA LOS ESPACIOS QUE HAY DE MANERA
 PRETERMINADA, DEPENDIENDE DE CUAL NAVEGADOR ABRA MI PAGINA
@@ -88,6 +89,7 @@ main {
     flex-direction: column; /*ESTO LE INDICA A LA MAQUINA QUE PRIMERO DEBE DE PONER EL TOPBAR Y LUEGO LA VITRINA CON LOS ITEMS*/
 }
 .topbar {
+    width: 100%;
     display: flex; /*ESTO ME ORGANIZA LOS ESPACIOS PARA QUE QUEDEN EN FILA */
     align-items: center; /*ESTO ME PERMITE ORGANIZAR TODOS LOS BLOQUES DE MANERA CENTRADA*/
     gap: 20px; /*ESTO ME DEJA ASIGNARLE UN PEQUENO ESPACIO ENTRE OTROS*/
@@ -107,7 +109,7 @@ main {
     padding: 0;
 }
 
-.topbar-nav a { /*ESTO GENERA UN FONDO CADA VEZ QUE SE POSICIONE EL MOSUE ENCIMA DE LA OPCION*/
+.topbar-nav a { /*ESTO GENERA UN FONDO CADA VEZ QUE SE POSICIONE EL MOUSE ENCIMA DE LA OPCION*/
     display: inline-block;
     padding: 8px 14px;
     font-size: 15px;
@@ -238,7 +240,7 @@ main {
 }
 
 
-@media (max-width: 900px){ /*ESTO SE ACTIVA SOLO CUANDO LA PAGINA TIENE UN TAMANO MENOR A 900PX*/
+@media (max-width: 300px){ /*ESTO SE ACTIVA SOLO CUANDO LA PAGINA TIENE UN TAMANO MENOR A 900PX*/
     body { /*ERROR ERROR ERROR FALTA ARREGLAR ------------------------------------
             AUN FALTA ARREGLAR ESTA PARTE PORQUE LA SIDEBAR
              OCUPA TODA LA PANTALLA DEL USUARIO DEDE EL INICIO.

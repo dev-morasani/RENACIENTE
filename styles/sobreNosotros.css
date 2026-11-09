@@ -1,0 +1,23 @@
+body{
+    font-family: Georgia, 'Times New Roman', serif;/* ESTA LINEA ESTABLECE EL TEXTO QUE VA A TENER TODA LA PAGINA*/
+    background-color: #f5f0e8;
+    color: #2a2a2a;
+}
+.topbar {
+    width: 100%;
+    display: flex; /*ESTO ME ORGANIZA LOS ESPACIOS PARA QUE QUEDEN EN FILA */
+    align-items: center; /*ESTO ME PERMITE ORGANIZAR TODOS LOS BLOQUES DE MANERA CENTRADA*/
+    gap: 20px; /*ESTO ME DEJA ASIGNARLE UN PEQUENO ESPACIO ENTRE OTROS*/
+    padding: 16px 28px; /*ESTO HACE QUE SE GENERE UN ESPACIO POR TODOS LOS LADOS*/
+    background-color: #fffaf0; 
+    border-bottom: 1px solid #e0d5c0; /*ESTO GENERA UNA LINEA QUE SEPARA EL TEXTO DEL SIDEBAR*/
+    position: sticky;
+    top: 0; /*ESTO FIJA LA BARRA LATERAL EN LA PARTE SUPERIOR*/
+    z-index:10;/*ESTO PERMITE QUE QUEDE ARRIBA DE TODA LA PAGINA Y SIEMPRE VA A PREVALECER*/
+}
+
+
+.texto-sobre-nosotros{
+    display: flex;
+    text-align:cente
+}
